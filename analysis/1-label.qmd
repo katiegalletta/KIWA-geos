@@ -16,7 +16,7 @@ This script will guide you through the tag labelling of pressure and/or accelera
 
 ```{r, setup}
 # Choose the id
-id <- "18LX"
+id <- "CN119"
 
 # Set the directory to the project root
 # see Working directory bullet point in https://bookdown.org/yihui/rmarkdown/notebook.html#executing-code
@@ -26,27 +26,6 @@ knitr::opts_knit$set(root.dir = normalizePath(".."))
 library(GeoPressureR)
 library(ggplot2)
 ```
-
-## Edit `config.yml`
-
-::: callout-tip
-*Delete this block when you have read!*
-
-Edit the default config according to your study: Use `default` for all parameters which are the same for *all* your tracks and add any parameter that is tag specific.
-
-To define specific parameters, create a new section with the tag name, e.g.,
-
-``` yaml
-18LX:
-  id: "18LX"
-  crop_start: "2017-06-20"
-  crop_end: "2018-05-02"
-  known: !expr data.frame(stap_id = 1,
-                    known_lon = 17.05,
-                    known_lat = 48.9)
-  scientific_name: "Acrocephalus arundinaceus" # only if you have different species, otherwise add to default
-```
-:::
 
 Check that the config is correct.
 
@@ -90,6 +69,8 @@ tag_label_write(tag)
 ```
 
 Open `csv` and edit on <https://trainset.raphaelnussbaumer.com/>.
+
+![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAaCAYAAADFTB7LAAAAcElEQVR4Xu3OwQmAQAxE0bClWYCW5N06tM6V2YPg5CjoF/JhLoHAi6iqn9eOefUbqrYvHY0cQDLyAlKRNyARmYA0ZMLRkAlGQyaU72tkAtlim7r/vJqDUDjlKBROOQyFU2icQuMUGqfQuBEaV1XPOwEx96nYACK8+wAAAABJRU5ErkJggg== "Run Current Chunk")
 
 ## Run [simple labelling checks](https://raphaelnussbaumer.com/GeoPressureManual/labelling-tracks.html#simple-checks)
 
@@ -139,6 +120,10 @@ plot_pressurepath(pressurepath)
 
 ```{r}
 plot_pressurepath(pressurepath, type = "hist")
+```
+
+```{r}
+plot(tag$map_pressure)
 ```
 
 ## Run [GeoPressureViz checks](https://raphaelnussbaumer.com/GeoPressureManual/labelling-tracks.html#geopressureviz-checks)

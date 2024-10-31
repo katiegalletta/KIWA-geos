@@ -1,10 +1,10 @@
-Package: GeoPressureTemplate
-Title: These are the Goal of my Study (One Line, Title Case)
+Package: KIWA-geos
+Title: Using Multi-sensor Geolocators to Track Kirtland's Warbler Migration
 URL: https://github.com/Rafnuss/GeoPressureTemplate
 Description: More detailed description of my research objective with my dataset available (one paragraph).
 Authors@R: 
-    person("Raphaël", "Nussbaumer", , "rafnuss@gmail.com", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0002-8185-1020"))
+    person("Katie", "Galletta", , "kjgalletta@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0004-9292-141X"))
 License: CC BY 4.0
 Version: 1.0.0.1
 Depends: 
